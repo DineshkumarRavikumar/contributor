@@ -73,19 +73,22 @@ $a-tags-hover: 'a:active, a:hover';
     //nav
 
     .wrapper {
-       
+       //height: 72px;
         .h-logo{
-            display: flex;
-            justify-content: center;
+        
+            position: absolute;
+            left: 0;
+            padding-left: 20px;
             
         }
-        nav {
-            background: rgba(rgb(0, 0, 0), 1);
+        nav {            
             ul.nav-menu {
+                display: flex;
+                flex-direction: column;
                 
-                text-align: center;
+                text-align: left;
                 padding-top: 50px;
-                font-size: 11px;
+                font-size: 14px;
                 
         }
     }
@@ -125,22 +128,7 @@ $a-tags-hover: 'a:active, a:hover';
     .footerLogo{
         height: 25px !important;
     }
-    .about-banner{
-        display: none;
-    }
-    .about-tagline{
-        position: absolute;
-        top: 120px;
-        left: -250px;
-        width: 300px;
-        
-        h1{
-            font-size: 28px !important;
-        }
-        p{
-            font-size: 16px !important;
-        }
-    }
+  
     .resources-tagline{
         position: absolute;
         top: 120px;
@@ -167,16 +155,45 @@ $a-tags-hover: 'a:active, a:hover';
             font-size: 16px !important;
         }
     }
-    .header.page-header-project{
-        height: 20px !important;
+    .page-header-project{
+        height: 444px !important;
+    }
+
+    .overflow-about{
+        margin-top: 8rem !important;
+        text-align: left;
+        padding-left: 10px;
+    }
+    
+    .about-banner{
+        display: none;
+    }
+    .about-tagline{
+        position: absolute;
+        top: 120px;
+        width: 300px;
+        
+        
+    }
+
+    .about-tagline>h1{
+        font-size: 36px !important;
+    }
+    .about-tagline>p{
+        font-size: 18 !important;
     }
     .circle-photo{
-        display: none;
+        visibility: visible !important;
+        height: 267px;
+        width: 267px;
+        margin-right: 5rem !important;
+        margin-top: 20rem;
     }
     .resources-img{
         display: none;
     }
 
+    
 }
 
 
@@ -222,13 +239,19 @@ $a-tags-hover: 'a:active, a:hover';
   }  
 
 @media (max-width: 1268px) {
-   .circle-photo{
-       visibility: hidden;
-   }
+   
    .card-modal{
        width: 30rem !important;
    }
   }
+
+@media (max-width: 1369px) {
+    .circle-photo{
+        margin-right: 0;
+    }
+   
+
+   }  
 
 body {
     background: #ffffff;
