@@ -73,7 +73,7 @@ $a-tags-hover: 'a:active, a:hover';
     //nav
 
     .wrapper {
-       //height: 72px;
+       height: 72px;
         .h-logo{
         
             position: absolute;
@@ -129,19 +129,6 @@ $a-tags-hover: 'a:active, a:hover';
         height: 25px !important;
     }
   
-    .resources-tagline{
-        position: absolute;
-        top: 120px;
-        left: -250px;
-        width: 300px;
-        
-        h1{
-            font-size: 28px !important;
-        }
-        p{
-            font-size: 16px !important;
-        }
-    }
     .project-tagline{
         position: absolute;
         top: 120px;
@@ -189,9 +176,7 @@ $a-tags-hover: 'a:active, a:hover';
         margin-right: 5rem !important;
         margin-top: 20rem;
     }
-    .resources-img{
-        display: none;
-    }
+    
 
     
 }
