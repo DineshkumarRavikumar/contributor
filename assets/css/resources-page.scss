@@ -11,8 +11,8 @@ header.page-header-resources{
     justify-content: space-around;
 }
 .resources-tagline{
-    margin-top: 30px;
-    margin-left: 10rem;
+    margin-top: 4rem;
+    margin-left: 16rem;
     background-color: #F2F2F2;
     height: 300px;  
     width: 30rem;
@@ -26,8 +26,8 @@ header.page-header-resources{
     }
 }
 .resources-img{
-    margin-top: 40px;
-   
+    margin-top: 4rem;
+    margin-left: 12rem;
 
 
 }
@@ -45,12 +45,14 @@ header.page-header-resources{
         width: 380px !important;
         padding-left: 5px;
         height: 174px !important;
+        margin-top: 20px;
   
     }
    }
-@media(max-width: 800px){
+@media(max-width: 1800px){
     .resources-img{
-        margin-top: 70px;
+        margin-right: 200px;
+        margin-top: 80px;
         width: 331px;
         height: 149px;
      }

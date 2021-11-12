@@ -53,12 +53,10 @@ $a-tags-hover: 'a:active, a:hover';
 
 @media screen and (max-width: 1478px){
     //body
-    .body-left, .body-right, .project-mic, .project-pen,.project-quote{
+    .body-left, .body-right{
         display: none;
     }
-     .circle-photo-big,.circle-photo-small,.circle-project{
-        display: none;
-    }
+  
     .header.page-header-project{
         height: 20px !important;
     }
@@ -169,13 +167,7 @@ $a-tags-hover: 'a:active, a:hover';
     .about-tagline>p{
         font-size: 18 !important;
     }
-    .circle-photo{
-        visibility: visible !important;
-        height: 267px;
-        width: 267px;
-        margin-right: 5rem !important;
-        margin-top: 20rem;
-    }
+   
     
 
     
@@ -230,13 +222,7 @@ $a-tags-hover: 'a:active, a:hover';
    }
   }
 
-@media (max-width: 1369px) {
-    .circle-photo{
-        margin-right: 0;
-    }
-   
 
-   }  
 
 body {
     background: #ffffff;
