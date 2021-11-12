@@ -33,3 +33,15 @@
         }
     }
 }
+.burger{
+    visibility: hidden;
+}
+@media screen and (max-width: 800px){
+    .burger{
+        visibility: visible;
+        position: absolute;
+        top: 15px;
+        right: 10px;
+
+    }     
+}
