@@ -187,40 +187,23 @@ $a-tags-hover: 'a:active, a:hover';
   }
 
   @media (max-width: 706px) {
-    .card-header{
-        h3{
-            margin-top: 20px;
-            font-size: 14px;
-            letter-spacing: 0em;
-        }
-    }
-    .cards{
-        width: 20rem !important;
-    }
-   .card{
-       left: -20px !important; 
-       width: 15rem;
-   }
-   .card-modal{
-       right: 0px !important;
-       width: 20rem;
-   }
+    
     .main-project{
         flex-direction: column;
     }
     .filter_box, .filter_box_large, .filter_box_small, .filter_FOI_medium, .filter_FOI_small{
-        left: 0rem !important;
+        left: 1.85rem !important;
         height: 50rem;
         width: 20rem;
     }
   }  
 
-@media (max-width: 1268px) {
+// @media (max-width: 1268px) {
    
-   .card-modal{
-       width: 30rem !important;
-   }
-  }
+//    .card-modal{
+//        width: 30rem !important;
+//    }
+//   }
 
 
 
