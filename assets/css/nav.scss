@@ -36,6 +36,9 @@
 .burger{
     visibility: hidden;
 }
+.cross{
+    visibility: hidden;
+}
 @media screen and (max-width: 800px){
     .burger{
         visibility: visible;
@@ -43,5 +46,11 @@
         top: 15px;
         right: 10px;
 
-    }     
+    }   
+    .cross{
+        
+        position: absolute;
+        top: 15px;
+        right: 10px;
+    }  
 }

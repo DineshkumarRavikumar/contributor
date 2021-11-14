@@ -37,6 +37,21 @@
        
         });
     });
+
+    $(function (){
+      $("a.burger").on("click", function(){
+        $(".wrapper").css('height','auto');
+        $(".burger").css('visibility', 'hidden');
+        $(".cross").css('visibility', 'visible');
+      });
+    });
+    $(function (){
+      $("a.cross").on("click", function(){
+        $(".cross").css('visibility', 'hidden');
+        $(".wrapper").css('height', '72px');
+        $(".burger").css('visibility', 'visible');
+      });
+    });
    
       </script>
 {% seo %}
