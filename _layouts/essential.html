@@ -52,6 +52,27 @@
         $(".burger").css('visibility', 'visible');
       });
     });
+
+    $(function(){
+      $("a.sub_menu").on("click", function(){
+        if($(".filter_mobile_contri").css("display")== "none"){
+        $(".filter_mobile_contri").css('display', 'flex');
+        }else{
+          $(".filter_mobile_contri").css('display', 'none');
+        }
+        
+      });
+    });
+    $(function(){
+      $("a.sub_menu_FOI").on("click", function(){
+        if($(".filter_mobile_FOI").css("display")== "none"){
+        $(".filter_mobile_FOI").css('display', 'flex');
+        }else{
+          $(".filter_mobile_FOI").css('display', 'none');
+        }
+        
+      });
+    });
    
       </script>
 {% seo %}

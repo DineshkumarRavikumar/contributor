@@ -15,11 +15,12 @@ header.page-header-project{
     grid-template-columns: 50% 50%;
 }
 .project-tagline{
-
+    position: absolute;
+    left: 10rem;
     width: 500px;
     opacity: 1; 
     padding-left: 5rem;
-    margin-top: 50PX;
+    margin-top: 70PX;
     background-color: #FFFFFF; 
     z-index: 1;
     
