@@ -11,6 +11,7 @@
   grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
   align-items: center;
   
+  
 
 }
 
@@ -28,8 +29,8 @@
     margin-right: 20rem;
     height: 451px;
     width: 451px;
+    top: 4rem;
     border-radius: 50%;
-   top: 4rem;
     box-shadow: -15px 8px 0 3px #2F7879;
     z-index: 1;
 }
@@ -47,4 +48,44 @@
     p{
         font-size: 18px;
     }
+}
+@media screen and (max-width: 1450px){
+    .about-container{
+        display: flex !important;
+        flex-wrap: wrap;
+        flex-direction: column;
+    }
+    .overflow-about{
+        margin-top: 8rem !important;
+        text-align: left;
+        padding-left: 10px;
+    }
+    
+    .about-banner{
+        display: none;
+    }
+    .about-tagline{
+        
+        top: 120px;
+        width: 300px;
+        
+        
+    }
+
+    .about-tagline>h1{
+        font-size: 36px !important;
+    }
+    .about-tagline>p{
+        font-size: 18 !important;
+    }
+    .circle-photo{
+        width: 267px;
+        height: 267px;
+        top: 23em;
+        left: 0;
+        right: 0;
+        margin-left: auto;
+        margin-right: auto;
+    }
+
 }
