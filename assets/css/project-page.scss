@@ -1,4 +1,4 @@
-header.page-header-project{
+.page-header-project{
     margin-top: 4em;
     background-color: #FFFFFF;
     height: 630px;
@@ -7,7 +7,7 @@ header.page-header-project{
 }
 .main-project{
     display: flex;
-    margin-left: 10%;
+    margin-left: 15%;
   
 }
 .project-container{
@@ -16,12 +16,10 @@ header.page-header-project{
 }
 .project-tagline{
     position: absolute;
-    left: 10rem;
-    width: 500px;
+    left: 16rem;
+    width: 460px;
     opacity: 1; 
-    padding-left: 5rem;
-    margin-top: 70PX;
-    background-color: #FFFFFF; 
+    margin-top: 4rem;
     z-index: 1;
     
     h1{
@@ -87,6 +85,18 @@ header.page-header-project{
     position: absolute;
     top: 30rem;
     left: 5rem;
+
+}
+.blanket{
+    display: none;    
+    position:absolute;
+    
+    height:200vh;
+    width: 100%;
+    background-color: #6C6C6C;
+    opacity: 0.8;
+
+    z-index: 99;
 }
 
 //tablet screen changes 
@@ -104,9 +114,20 @@ header.page-header-project{
     margin-top: 270px;
    }
    .project-tagline{
-    margin-top: 0;
-    margin-left: 10rem!important;
-    position: relative;
+    margin-left: 20px !important;
+    left: 0;
+    width: 350px !important;
+    padding-left: 5px;
+    height: 174px !important;
+    margin-top: 20px;
+    
+    
+    h1{
+        font-size: 36px;
+    }
+    p{
+        font-size: 18px;
+    }
     
    
    }

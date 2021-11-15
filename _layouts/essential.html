@@ -25,16 +25,18 @@
     
       $(function () {
         $("a.card-link").on("click", function () {
-            $(location).attr('pathname');
-            console.log(location)
-            console.log("clicked");
             $(this).next().removeClass("hide");
+            $(".blanket").css('display', 'inline');
+            $(".page-header-project").css({'background-color':'#6C6C6C', 'opacity':'0.8','z-index':'99999'});
+            $("html").css('overflow','hidden');
         });
     });
     $(function () {
         $("a.close").on("click", function () {
             $("div.card-modal").addClass("hide");
-       
+            $(".blanket").css('display', 'none');
+            $(".page-header-project").css({'background-color':'', 'opacity':'','z-index':''});
+            $("html").css('overflow','');
         });
     });
 
