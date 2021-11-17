@@ -27,8 +27,13 @@
         $("a.card-link").on("click", function () {
             $(this).next().removeClass("hide");
             $(".blanket").css('display', 'inline');
+            console.log()
             $(".page-header-project").css({'background-color':'#6C6C6C', 'opacity':'0.8','z-index':'99999'});
             $("html").css('overflow','hidden');
+            $(".circle-photo-small").css('visibility', 'hidden');
+            $(".circle-photo-big").css('visibility', 'hidden');
+            $(".circle-project").css('visibility', 'hidden');
+
         });
     });
     $(function () {
@@ -37,6 +42,9 @@
             $(".blanket").css('display', 'none');
             $(".page-header-project").css({'background-color':'', 'opacity':'','z-index':''});
             $("html").css('overflow','');
+            $(".circle-photo-small").css('visibility', 'visible');
+            $(".circle-photo-big").css('visibility', 'visible');
+            $(".circle-project").css('visibility', 'visible');
         });
     });
 

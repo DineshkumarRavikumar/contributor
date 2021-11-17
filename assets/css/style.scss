@@ -45,6 +45,7 @@ $a-tags-hover: 'a:active, a:hover';
 @import "card";
 @import "filter";
 @import "home";
+@import "search";
 
 #logo {
     max-width: 832px;
@@ -160,12 +161,6 @@ $a-tags-hover: 'a:active, a:hover';
   
   }  
 
-// @media (max-width: 1268px) {
-   
-//    .card-modal{
-//        width: 30rem !important;
-//    }
-//   }
 
 
 
