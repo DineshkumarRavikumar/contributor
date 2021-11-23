@@ -1,3 +1,0 @@
----
-layout: filter_writer
----

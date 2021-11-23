@@ -1,6 +1,6 @@
 - display: true
   name: AID
-  UID: 1
+  UID: a
   url: https://aid.autoai.org/
   contact_name: Xiaozhe Yao
   contact_info:
@@ -10,7 +10,7 @@
     A package manager for Machine Learning that manages the download, install and run of machine learning algorithms.
 
 - display: true
-  UID: 2
+  UID: b
   name: Arbor Chat
   url: https://arbor.chat/
   contact_name: Chris Waldon
@@ -22,7 +22,7 @@
 
 - display: true
   name: Augur
-  UID: 3
+  UID: c
   url: https://augurlabs.io/
   contact_name: Sean Goggins
   contact_info: s@goggins.com
@@ -33,7 +33,7 @@
 
 - display: true
   name: Cboard
-  UID: 4
+  UID: d
   url: https://github.com/cboard-org/cboard
   contact_name: Martin Bedouret
   contact_info: martinbedouret@gmail.com
@@ -45,7 +45,7 @@
 
 - display: true
   name: Elün
-  UID: 5
+  UID: e
   url: https://ingenieria.udd.cl/centroid/laboratorios-de-investigacion/extreme-environmental-lab/#!/modal/272/elun-sistema-colaborativo-de-monitoreo-para-areas-protegidas-de-chile
   contact_name: Javiera de la Fuente
   contact_info: jdelafuentec@udd.cl
@@ -55,7 +55,7 @@
     Elün proposes the use of photos taken by visitors of Protected Areas, plus information provided by their cell phone sensors, to create a monitoring system. Which will be aimed at research and subsequent decision-making for the conservation of biodiversity in these places. The concept of participation is called «Citizen Science». The project includes the creation of a system that processes the images obtained through image recognition. It proposes an interface (web) that organizes the information temporally and geographically for the dissemination and analysis of experts and enthusiasts.
 
 - display: true
-  UID: 6
+  UID: f
   name: Fedora
   url: https://web.libera.chat/#fedora-join
   contact_name: Máirín Duffy
@@ -67,7 +67,7 @@
 
 - display: true
   name: ChRIS
-  UID: 7
+  UID: g
   url: http://chrisproject.org
   contact_name: Máirín Duffy
   contact_info: duffy@redhat.com
@@ -78,7 +78,7 @@
 
 - display: true
   name: Eclipse Che
-  UID: 8
+  UID: h
   url: https://github.com/eclipse/che/blob/master/CONTRIBUTING.md
   contact_name: Mario Loriedo
   contact_info: mloriedo@redhat.com
@@ -89,7 +89,7 @@
 
 - display: true
   name: Gluster
-  UID: 9
+  UID: i
   url: https://www.gluster.org/community/
   contact_name: Saju
   contact_info: sajmoham@redhat.com
@@ -100,7 +100,7 @@
 
 - display: true
   name: LibreOffice
-  UID: 10
+  UID: j
   url: https://www.libreoffice.org/community/get-involved/
   contact_name: Mike Saunders
   contact_info: mike.saunders@documentfoundation.org
@@ -111,7 +111,7 @@
 
 - display: true
   name: Meshery
-  UID: 11
+  UID: k
   url: https://layer5.io/community/newcomers
   contact_name: Lee Calcote
   contact_info: lee.calcote@layer5.io
@@ -122,7 +122,7 @@
 
 - display: true
   name: Project Thoth
-  UID: 12
+  UID: l
   url: https://github.com/thoth-station
   contact_name: Christoph Goern
   contact_info: goern@redhat.com
@@ -133,7 +133,7 @@
 
 - display: true
   name: qAIRaMap Open Source
-  UID: 13
+  UID: m
   url: https://qaira.github.io/
   contact_name: Sabrina Campos
   contact_info: s.campos@qairadrones.com
@@ -144,7 +144,7 @@
 
 - display: true
   name: QIoT Project
-  UID: 14
+  UID: n
   url: https://qiot-project.github.io/
   contact_name: Andrea Battaglia
   contact_info: andrea.battaglia@redhat.com
@@ -155,7 +155,7 @@
 
 - display: true
   name: The Qubinode
-  UID: 15
+  UID: o
   url: https://www.qubinode.io/
   contact_name: Rodrique Heron
   contact_info: rheron@redhat.com
@@ -166,7 +166,7 @@
 
 - display: true
   name: ScioXR
-  UID: 16
+  UID: p
   url: https://www.scioxr.com
   contact_name: Adrian Djura
   contact_info: adrian.djura@gmail.com
@@ -177,7 +177,7 @@
 
 - display: true
   name: Stopgo
-  UID: 17
+  UID: q
   url: https://gitlab.com/makerbox/stopgo2
   contact_name: Seth Kenlon
   contact_info: seth@opensource.com
@@ -188,7 +188,7 @@
 
 - display: true
   name: TaskODrill
-  UID: 18
+  UID: r
   url: https://github.com/fcano/taskodrill
   contact_name: Florencio Cano
   contact_info: fcanogab@redhat.com
@@ -199,7 +199,7 @@
 
 - display: true
   name: VRapeutic
-  UID: 19
+  UID: s
   url: https://www.facebook.com/myvrapeutic/
   contact_name: Ahmad Al-Kabbany
   contact_info: alkabbany@myvrapeutic.com

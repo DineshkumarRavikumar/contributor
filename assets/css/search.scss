@@ -1,3 +1,20 @@
 .search-container{
     position: absolute;
+    left: 13.8rem;
+    top:42rem;
+    input{
+        height: 30px;
+        width: 10rem;
+    }
+    button{
+        background-color: #fff;
+        border: none;
+        outline: none;
+    }
+}
+.search-icon{
+    width: 20px;
+    height: 20px;
+    margin-top: 2px;
+    
 }

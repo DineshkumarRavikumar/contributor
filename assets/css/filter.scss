@@ -6,6 +6,7 @@
     height: 46rem;
     border: solid 2px;
     margin-bottom: 50px;
+  
 }
 .filter_box_mobile{
   visibility: hidden;
@@ -18,7 +19,7 @@
   list-style-type: none;
   justify-content: center;
   line-height: 3rem;
-  text-align: center;
+  text-align: left;
   margin-right: 2.2rem;
 }
 
@@ -35,6 +36,7 @@
 .contri_type{
     position: relative;
     margin-top: 6rem;
+  
     h3{
         text-align: center;
         color: #000000;
@@ -42,10 +44,22 @@
 }
 .FOI_type{
   position: relative;
+  margin-left: 2.5rem;
   h3{
-      text-align: center;
+      text-align: left;
       color: #000000;
   }
+}
+.active1{
+  border: solid ;
+  padding-left: 10px;
+  padding-right: 10px;
+  
+  a{
+     font-weight: bolder; 
+     color: black;
+  }
+  
 }
 @media (max-width: 800px) {
     
