@@ -8,11 +8,11 @@
       </h3></a>
 
     </div>
-  <ul class="filter_mobile_contri"> 
-    <li {% if page.url contains "developer" %} class="active1" {% endif%}><a href="developers.html" >Developers</a> </li>
-    <li {% if page.url contains "designer" %} class="active1" {% endif%}><a href="designers.html" >Designers</a> </li>
-    <li {% if page.url contains "writer" %} class="active1" {% endif%}><a href="writer.html" >Communications</a> </li>
-    <li {% if page.url contains "project" %} class="active1" {% endif%}><a href="projects.html" >All</a> </li>
+  <ul class="filter_mobile_contri" id="filter"> 
+    <li id="dev-active" ><a href="javascript:;" onclick="devFunc();" >Developers</a> </li>  
+    <li id="des-active" ><a href="javascript:;" onclick="desFunc();" >Designers</a> </li>
+    <li id="comm-active" ><a href="javascript:;" onclick="commFunc();" >Communications</a> </li>
+    <li id="project-active" {% if page.url contains "project" %}  {% endif%}><a href="projects.html" >All</a> </li>
 </ul>
 <hr>
 <div class="FOI_type_mobile">
@@ -22,15 +22,253 @@
 
   </div>
   <ul class="filter_mobile_FOI">
-    <li {% if page.url contains "education" %} class="active1" {% endif%}><a href="FOI_education.html" >Education</a> </li>
-    <li {% if page.url contains "environment" %} class="active1" {% endif%}><a href="FOI_environmental.html" >Environment</a> </li>
-    <li {% if page.url contains "medical" %} class="active1" {% endif%}><a href="FOI_medical.html" >Medical</a> </li>
-    <li {% if page.url contains "multimedia" %} class="active1" {% endif%}><a href="FOI_multimedia.html" >Multimedia</a> </li>
-    <li {% if page.url contains "technology" %} class="active1" {% endif%}><a href="FOI_technology.html" >Technology</a> </li>
-    <li {% if page.url contains "project" %} class="active1" {% endif%}><a href="projects.html" >All</a> </li>
+    <li id="edu-active" ><a href="javascript:;" onclick="eduFunc();" >Education</a> </li>
+    <li id="env-active" ><a href="javascript:;" onclick="envFunc();" >Environment</a> </li>
+    <li id="med-active" ><a href="javascript:;" onclick="medFunc();" >Medical</a> </li>
+    <li id="multi-active" ><a href="javascript:;" onclick="multiFunc();" >Multimedia</a> </li>
+    <li id="tech-active" ><a href="javascript:;" onclick="techFunc();" >Technology</a> </li>
+    <li id="project-active2" {% if page.url contains "project" %} {% endif%}><a href="projects.html" >All</a> </li>
   </ul>
 </div>
 <script src="https://code.jquery.com/jquery-3.5.0.js"></script>
+<script type="text/javascript">
+ //Developer filter
+ let devActive= document.getElementById("dev-active");
+ let desActive = document.getElementById("des-active");
+ let commActive = document.getElementById("comm-active");
+ let projActive= document.getElementById("project-active");
+ let projActive2=document.getElementById("project-active2");
+ let eduActive= document.getElementById("edu-active");
+ let envActive= document.getElementById("env-active");
+ let medActive= document.getElementById("med-active");
+ let multiActive= document.getElementById("multi-active");
+ let techActive= document.getElementById("tech-active");
+
+  function devFunc() {
+     filter = "DEVELOPERS";
+     console.log(devActive);
+     devActive.classList.add("active1");
+     projActive.classList.remove("active1");
+     desActive.classList.remove("active1");
+     commActive.classList.remove("active1");
+     projActive2.classList.remove("active1");
+     envActive.classList.remove("active1");
+     medActive.classList.remove("active1");
+     multiActive.classList.remove("active1");
+     techActive.classList.remove("active1");
+     eduActive.classList.remove("active1");
+     ul = document.getElementById("cards");
+     li = ul.getElementsByTagName("li");
+    
+     for (i = 0; i < li.length; i++) {
+         a = li[i].getElementsByTagName("div")[0];
+         console.log(a);
+         txtValue = a.textContent || a.innerText;
+         if (txtValue.toUpperCase().indexOf(filter) > -1) {
+             li[i].style.display = "";
+         } else {
+             li[i].style.display = "none";
+         }
+     }
+ }
+//Designer filter 
+ function desFunc() {
+     filter = "DESIGNER";
+     desActive.classList.add("active1");
+     devActive.classList.remove("active1");
+     projActive.classList.remove("active1");
+     commActive.classList.remove("active1");
+     projActive2.classList.remove("active1");
+     envActive.classList.remove("active1");
+     medActive.classList.remove("active1");
+     multiActive.classList.remove("active1");
+     techActive.classList.remove("active1");
+     eduActive.classList.remove("active1");
+     ul = document.getElementById("cards");
+     li = ul.getElementsByTagName("li");
+     console.log(li);
+     console.log(filter)
+     for (i = 0; i < li.length; i++) {
+         a = li[i].getElementsByTagName("div")[0];
+         console.log(a);
+         txtValue = a.textContent || a.innerText;
+         if (txtValue.toUpperCase().indexOf(filter) > -1) {
+             li[i].style.display = "";
+         } else {
+             li[i].style.display = "none";
+         }
+     }
+ }
+ //Communication filter
+ function commFunc() {
+     filter = "CONTENT";
+     commActive.classList.add("active1");
+     projActive.classList.remove("active1");
+     desActive.classList.remove("active1");
+     devActive.classList.remove("active1");
+     envActive.classList.remove("active1");
+     medActive.classList.remove("active1");
+     multiActive.classList.remove("active1");
+     techActive.classList.remove("active1");
+     eduActive.classList.remove("active1");
+     ul = document.getElementById("cards");
+     projActive2.classList.remove("active1");
+     li = ul.getElementsByTagName("li");
+     console.log(li);
+     console.log(filter)
+     for (i = 0; i < li.length; i++) {
+         a = li[i].getElementsByTagName("div")[0];
+         console.log(a);
+         txtValue = a.textContent || a.innerText;
+         if (txtValue.toUpperCase().indexOf(filter) > -1) {
+             li[i].style.display = "";
+         } else {
+             li[i].style.display = "none";
+         }
+     }
+ }
+
+ //Education filter
+ function eduFunc() {
+     filter = "EDUCATION";
+     eduActive.classList.add("active1");
+     commActive.classList.remove("active1")
+     projActive.classList.remove("active1");
+     desActive.classList.remove("active1");
+     envActive.classList.remove("active1");
+     medActive.classList.remove("active1");
+     multiActive.classList.remove("active1");
+     techActive.classList.remove("active1");
+     ul = document.getElementById("cards");
+     projActive2.classList.remove("active1");
+
+     li = ul.getElementsByTagName("li");
+     console.log(li);
+     console.log(filter)
+     for (i = 0; i < li.length; i++) {
+         a = li[i].getElementsByTagName("h3")[0];
+         console.log(a);
+         txtValue = a.textContent || a.innerText;
+         if (txtValue.toUpperCase().indexOf(filter) > -1) {
+             li[i].style.display = "";
+         } else {
+             li[i].style.display = "none";
+         }
+     }
+ }
+ //Environment filter
+ function envFunc() {
+     filter = "ENVIRONMENT";
+     envActive.classList.add("active1");
+     commActive.classList.remove("active1")
+     projActive.classList.remove("active1");
+     desActive.classList.remove("active1");
+     eduActive.classList.remove("active1");
+     medActive.classList.remove("active1");
+     multiActive.classList.remove("active1");
+     techActive.classList.remove("active1");
+     ul = document.getElementById("cards");
+     projActive2.classList.remove("active1");
+
+     li = ul.getElementsByTagName("li");
+     console.log(li);
+     console.log(filter)
+     for (i = 0; i < li.length; i++) {
+         a = li[i].getElementsByTagName("h3")[0];
+         console.log(a);
+         txtValue = a.textContent || a.innerText;
+         if (txtValue.toUpperCase().indexOf(filter) > -1) {
+             li[i].style.display = "";
+         } else {
+             li[i].style.display = "none";
+         }
+     }
+ }
+ //Medical filter
+ function medFunc() {
+     filter = "MEDICAL";
+     medActive.classList.add("active1");
+     commActive.classList.remove("active1")
+     projActive.classList.remove("active1");
+     desActive.classList.remove("active1");
+     envActive.classList.remove("active1");
+     eduActive.classList.remove("active1");
+     multiActive.classList.remove("active1");
+     techActive.classList.remove("active1");
+     ul = document.getElementById("cards");
+     projActive2.classList.remove("active1");
+
+     li = ul.getElementsByTagName("li");
+     console.log(li);
+     console.log(filter)
+     for (i = 0; i < li.length; i++) {
+         a = li[i].getElementsByTagName("h3")[0];
+         console.log(a);
+         txtValue = a.textContent || a.innerText;
+         if (txtValue.toUpperCase().indexOf(filter) > -1) {
+             li[i].style.display = "";
+         } else {
+             li[i].style.display = "none";
+         }
+     }
+ }
+ //Multimedia filter
+ function multiFunc() {
+     filter = "MULTIMEDIA";
+     multiActive.classList.add("active1");
+     commActive.classList.remove("active1")
+     projActive.classList.remove("active1");
+     desActive.classList.remove("active1");
+     envActive.classList.remove("active1");
+     medActive.classList.remove("active1");
+     eduActive.classList.remove("active1");
+     techActive.classList.remove("active1");
+     ul = document.getElementById("cards");
+     projActive2.classList.remove("active1");
+
+     li = ul.getElementsByTagName("li");
+     console.log(li);
+     console.log(filter)
+     for (i = 0; i < li.length; i++) {
+         a = li[i].getElementsByTagName("h3")[0];
+         console.log(a);
+         txtValue = a.textContent || a.innerText;
+         if (txtValue.toUpperCase().indexOf(filter) > -1) {
+             li[i].style.display = "";
+         } else {
+             li[i].style.display = "none";
+         }
+     }
+ }
+ //Technology filter
+ function techFunc() {
+     filter = "TECHNOLOGY";
+     techActive.classList.add("active1");
+     commActive.classList.remove("active1")
+     projActive.classList.remove("active1");
+     desActive.classList.remove("active1");
+     envActive.classList.remove("active1");
+     medActive.classList.remove("active1");
+     multiActive.classList.remove("active1");
+     eduActive.classList.remove("active1");
+     ul = document.getElementById("cards");
+     projActive2.classList.remove("active1");
+
+     li = ul.getElementsByTagName("li");
+     console.log(li);
+     console.log(filter)
+     for (i = 0; i < li.length; i++) {
+         a = li[i].getElementsByTagName("h3")[0];
+         console.log(a);
+         txtValue = a.textContent || a.innerText;
+         if (txtValue.toUpperCase().indexOf(filter) > -1) {
+             li[i].style.display = "";
+         } else {
+             li[i].style.display = "none";
+         }
+     }
+ }
+ </script>
     <script>
    
     

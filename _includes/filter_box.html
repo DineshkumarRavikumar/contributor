@@ -46,6 +46,7 @@
 
   function devFunc() {
      filter = "DEVELOPERS";
+     console.log(devActive);
      devActive.classList.add("active1");
      projActive.classList.remove("active1");
      desActive.classList.remove("active1");
@@ -58,8 +59,7 @@
      eduActive.classList.remove("active1");
      ul = document.getElementById("cards");
      li = ul.getElementsByTagName("li");
-     console.log(li);
-     console.log(filter)
+  
      for (i = 0; i < li.length; i++) {
          a = li[i].getElementsByTagName("div")[0];
          console.log(a);
@@ -86,8 +86,7 @@
      eduActive.classList.remove("active1");
      ul = document.getElementById("cards");
      li = ul.getElementsByTagName("li");
-     console.log(li);
-     console.log(filter)
+
      for (i = 0; i < li.length; i++) {
          a = li[i].getElementsByTagName("div")[0];
          console.log(a);

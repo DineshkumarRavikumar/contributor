@@ -91,7 +91,7 @@
     display: none;    
     position:absolute;
     
-    height:200vh;
+    height:400vh;
     width: 100%;
     background-color: #6C6C6C;
     opacity: 0.8;
@@ -185,5 +185,8 @@
     }
     .project-visual{
         left: -50px;
+    }
+    .blanket{
+        height: 1100vh !important;
     }
 }

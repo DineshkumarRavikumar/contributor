@@ -1,13 +1,17 @@
 .search-container{
-    position: absolute;
-    left: 13.8rem;
-    top:42rem;
+    position: relative;
+    margin-right: 4rem;
+   
     input{
-        height: 30px;
+        position: absolute;
+        height: 34px;
         width: 10rem;
     }
     button{
+        position: absolute;
         background-color: #fff;
+        margin-top: 2px;
+        left: 170px;
         border: none;
         outline: none;
     }
@@ -17,4 +21,25 @@
     height: 20px;
     margin-top: 2px;
     
+}
+@media (max-width: 1391px) {
+
+}
+@media screen and (max-width: 800px){
+    .search-container{
+     margin-top: 3rem;
+     margin-left: 3.04rem;
+
+        
+        input{
+            margin-bottom: 30px !important;
+            height: 50px;
+            width: 15rem;
+            border: 1px solid;
+        }
+        button{
+            margin-top:4px;
+            left: 15.5rem;
+        }
+    }
 }
