@@ -27,12 +27,20 @@
     <li id="med-active" ><a href="javascript:;" onclick="medFunc();" >Medical</a> </li>
     <li id="multi-active" ><a href="javascript:;" onclick="multiFunc();" >Multimedia</a> </li>
     <li id="tech-active" ><a href="javascript:;" onclick="techFunc();" >Technology</a> </li>
-    <li id="project-active2" {% if page.url contains "project" %} class="active1" {% endif%}><a href="projects.html" >All</a> </li>
+    <li id="project-active2" {% if page.url contains "project" %} class="active2" {% endif%}><a href="projects.html" >All</a> </li>
   </ul>
 </div>
 <script src="https://code.jquery.com/jquery-3.5.0.js"></script>
 <script type="text/javascript">
  //Developer filter
+
+ $(document).ready(function() {
+  $("a").click(function() {
+    $(this).dblclick();
+  });
+});
+
+
  let devActive= document.getElementById("dev-active");
  let desActive = document.getElementById("des-active");
  let commActive = document.getElementById("comm-active");
@@ -44,229 +52,344 @@
  let multiActive= document.getElementById("multi-active");
  let techActive= document.getElementById("tech-active");
 
-  function devFunc() {
-     filter = "DEVELOPERS";
-     console.log(devActive);
+  function devFunc() {          
+    $(this).dblclick(); 
+    filter1Tag=document.getElementsByClassName("active1")[0].innerText;
+    filter=filter1Tag.toUpperCase();
+     filter2tag=document.getElementsByClassName("active2")[0].innerText;
+   
+        filter2=filter2tag.toUpperCase();
+   
+     
+     
+     chapters= {{ site.data.projects | jsonify }};
+
      devActive.classList.add("active1");
      projActive.classList.remove("active1");
      desActive.classList.remove("active1");
      commActive.classList.remove("active1");
-     projActive2.classList.remove("active1");
-     envActive.classList.remove("active1");
-     medActive.classList.remove("active1");
-     multiActive.classList.remove("active1");
-     techActive.classList.remove("active1");
-     eduActive.classList.remove("active1");
+  
      ul = document.getElementById("cards");
      li = ul.getElementsByTagName("li");
-  
+  if(filter2=="ALL"){
      for (i = 0; i < li.length; i++) {
          a = li[i].getElementsByTagName("div")[0];
-         console.log(a);
          txtValue = a.textContent || a.innerText;
-         if (txtValue.toUpperCase().indexOf(filter) > -1) {
+        
+         if (txtValue.toUpperCase().indexOf(filter) > -1 )  {
              li[i].style.display = "";
          } else {
              li[i].style.display = "none";
          }
      }
- }
+ }else{   for (i = 0; i < li.length; i++) {
+         a = li[i].getElementsByTagName("div")[0];
+         a2=li[i].getElementsByTagName("h3")[0];
+         console.log(filter2);
+         txtValue = a.textContent || a.innerText;
+         txtValue2 = a2.textContent || a2.innerText;
+         if (txtValue.toUpperCase().indexOf(filter) > -1 && txtValue2.toUpperCase().indexOf(filter2) > -1)  {
+             li[i].style.display = "";
+         } else {
+             li[i].style.display = "none";
+         }
+     }}}
 //Designer filter 
  function desFunc() {
-     filter = "DESIGNER";
+    $(this).dblclick(); 
+    filter1Tag=document.getElementsByClassName("active1")[0].innerText;
+    filter=filter1Tag.toUpperCase();
+     filter2tag=document.getElementsByClassName("active2")[0].innerText;
+   
+        filter2=filter2tag.toUpperCase();
+   
+     
      desActive.classList.add("active1");
      devActive.classList.remove("active1");
      projActive.classList.remove("active1");
-     commActive.classList.remove("active1");
-     projActive2.classList.remove("active1");
-     envActive.classList.remove("active1");
-     medActive.classList.remove("active1");
-     multiActive.classList.remove("active1");
-     techActive.classList.remove("active1");
-     eduActive.classList.remove("active1");
+    
      ul = document.getElementById("cards");
      li = ul.getElementsByTagName("li");
 
+     if(filter2=="ALL"){
      for (i = 0; i < li.length; i++) {
          a = li[i].getElementsByTagName("div")[0];
-         console.log(a);
          txtValue = a.textContent || a.innerText;
-         if (txtValue.toUpperCase().indexOf(filter) > -1) {
+        
+         if (txtValue.toUpperCase().indexOf(filter) > -1 )  {
              li[i].style.display = "";
          } else {
              li[i].style.display = "none";
          }
      }
- }
+ }else{   for (i = 0; i < li.length; i++) {
+         a = li[i].getElementsByTagName("div")[0];
+         a2=li[i].getElementsByTagName("h3")[0];
+         console.log(filter2);
+         txtValue = a.textContent || a.innerText;
+         txtValue2 = a2.textContent || a2.innerText;
+         if (txtValue.toUpperCase().indexOf(filter) > -1 && txtValue2.toUpperCase().indexOf(filter2) > -1)  {
+             li[i].style.display = "";
+         } else {
+             li[i].style.display = "none";
+         }
+     }}}
  //Communication filter
  function commFunc() {
-     filter = "CONTENT";
+    $(this).dblclick(); 
+    filter1Tag=document.getElementsByClassName("active1")[0].innerText;
+    filter=filter1Tag.toUpperCase();
+     filter2tag=document.getElementsByClassName("active2")[0].innerText;
+   
+        filter2=filter2tag.toUpperCase();
+   
+     
      commActive.classList.add("active1");
      projActive.classList.remove("active1");
      desActive.classList.remove("active1");
      devActive.classList.remove("active1");
-     envActive.classList.remove("active1");
-     medActive.classList.remove("active1");
-     multiActive.classList.remove("active1");
-     techActive.classList.remove("active1");
-     eduActive.classList.remove("active1");
+     
      ul = document.getElementById("cards");
-     projActive2.classList.remove("active1");
+
      li = ul.getElementsByTagName("li");
-     console.log(li);
-     console.log(filter)
+   
+     if(filter2=="ALL"){
      for (i = 0; i < li.length; i++) {
          a = li[i].getElementsByTagName("div")[0];
-         console.log(a);
          txtValue = a.textContent || a.innerText;
-         if (txtValue.toUpperCase().indexOf(filter) > -1) {
+        
+         if (txtValue.toUpperCase().indexOf(filter) > -1 )  {
              li[i].style.display = "";
          } else {
              li[i].style.display = "none";
          }
      }
- }
+ }else{   for (i = 0; i < li.length; i++) {
+         a = li[i].getElementsByTagName("div")[0];
+         a2=li[i].getElementsByTagName("h3")[0];
+         console.log(filter2);
+         txtValue = a.textContent || a.innerText;
+         txtValue2 = a2.textContent || a2.innerText;
+         if (txtValue.toUpperCase().indexOf(filter) > -1 && txtValue2.toUpperCase().indexOf(filter2) > -1)  {
+             li[i].style.display = "";
+         } else {
+             li[i].style.display = "none";
+         }
+     }}}
 
  //Education filter
  function eduFunc() {
-     filter = "EDUCATION";
-     eduActive.classList.add("active1");
-     commActive.classList.remove("active1")
-     projActive.classList.remove("active1");
-     desActive.classList.remove("active1");
-     envActive.classList.remove("active1");
-     medActive.classList.remove("active1");
-     multiActive.classList.remove("active1");
-     techActive.classList.remove("active1");
+    $(this).dblclick(); 
+    filter1Tag=document.getElementsByClassName("active1")[0].innerText;
+    filter=filter1Tag.toUpperCase();
+     filter2tag=document.getElementsByClassName("active2")[0].innerText;
+   
+        filter2=filter2tag.toUpperCase();
+   
+     
+     eduActive.classList.add("active2");
+   
+     envActive.classList.remove("active2");
+     medActive.classList.remove("active2");
+     multiActive.classList.remove("active2");
+     techActive.classList.remove("active2");
      ul = document.getElementById("cards");
-     projActive2.classList.remove("active1");
+     projActive2.classList.remove("active2");
 
      li = ul.getElementsByTagName("li");
-     console.log(li);
-     console.log(filter)
+     if(filter=="ALL"){
      for (i = 0; i < li.length; i++) {
-         a = li[i].getElementsByTagName("h3")[0];
-         console.log(a);
+         a = li[i].getElementsByTagName("div")[0];
          txtValue = a.textContent || a.innerText;
-         if (txtValue.toUpperCase().indexOf(filter) > -1) {
+        
+         if (txtValue.toUpperCase().indexOf(filter) > -1 )  {
              li[i].style.display = "";
          } else {
              li[i].style.display = "none";
          }
      }
- }
+ }else{   for (i = 0; i < li.length; i++) {
+         a = li[i].getElementsByTagName("div")[0];
+         a2=li[i].getElementsByTagName("h3")[0];
+         console.log(filter2);
+         txtValue = a.textContent || a.innerText;
+         txtValue2 = a2.textContent || a2.innerText;
+         if (txtValue.toUpperCase().indexOf(filter) > -1 && txtValue2.toUpperCase().indexOf(filter2) > -1)  {
+             li[i].style.display = "";
+         } else {
+             li[i].style.display = "none";
+         }
+     }}}
  //Environment filter
  function envFunc() {
-     filter = "ENVIRONMENT";
-     envActive.classList.add("active1");
-     commActive.classList.remove("active1")
-     projActive.classList.remove("active1");
-     desActive.classList.remove("active1");
-     eduActive.classList.remove("active1");
-     medActive.classList.remove("active1");
-     multiActive.classList.remove("active1");
-     techActive.classList.remove("active1");
+    $(this).dblclick(); 
+    filter1Tag=document.getElementsByClassName("active1")[0].innerText;
+    filter=filter1Tag.toUpperCase();
+     filter2tag=document.getElementsByClassName("active2")[0].innerText;
+   
+        filter2=filter2tag.toUpperCase();
+   
+     
+     envActive.classList.add("active2");
+    
+   
+     eduActive.classList.remove("active2");
+     medActive.classList.remove("active2");
+     multiActive.classList.remove("active2");
+     techActive.classList.remove("active2");
      ul = document.getElementById("cards");
-     projActive2.classList.remove("active1");
+     projActive2.classList.remove("active2");
 
      li = ul.getElementsByTagName("li");
-     console.log(li);
-     console.log(filter)
+     if(filter=="ALL"){
      for (i = 0; i < li.length; i++) {
-         a = li[i].getElementsByTagName("h3")[0];
-         console.log(a);
+         a = li[i].getElementsByTagName("div")[0];
          txtValue = a.textContent || a.innerText;
-         if (txtValue.toUpperCase().indexOf(filter) > -1) {
+        
+         if (txtValue.toUpperCase().indexOf(filter) > -1 )  {
              li[i].style.display = "";
          } else {
              li[i].style.display = "none";
          }
      }
- }
+ }else{   for (i = 0; i < li.length; i++) {
+         a = li[i].getElementsByTagName("div")[0];
+         a2=li[i].getElementsByTagName("h3")[0];
+         console.log(filter2);
+         txtValue = a.textContent || a.innerText;
+         txtValue2 = a2.textContent || a2.innerText;
+         if (txtValue.toUpperCase().indexOf(filter) > -1 && txtValue2.toUpperCase().indexOf(filter2) > -1)  {
+             li[i].style.display = "";
+         } else {
+             li[i].style.display = "none";
+         }
+     }}}
  //Medical filter
  function medFunc() {
-     filter = "MEDICAL";
-     medActive.classList.add("active1");
-     commActive.classList.remove("active1")
-     projActive.classList.remove("active1");
-     desActive.classList.remove("active1");
-     envActive.classList.remove("active1");
-     eduActive.classList.remove("active1");
-     multiActive.classList.remove("active1");
-     techActive.classList.remove("active1");
+    $(this).dblclick(); 
+    filter1Tag=document.getElementsByClassName("active1")[0].innerText;
+    filter=filter1Tag.toUpperCase();
+     filter2tag=document.getElementsByClassName("active2")[0].innerText;
+   
+        filter2=filter2tag.toUpperCase();
+   
+     
+     medActive.classList.add("active2");
+     envActive.classList.remove("active2");
+     eduActive.classList.remove("active2");
+     multiActive.classList.remove("active2");
+     techActive.classList.remove("active2");
      ul = document.getElementById("cards");
-     projActive2.classList.remove("active1");
+     projActive2.classList.remove("active2");
 
      li = ul.getElementsByTagName("li");
-     console.log(li);
-     console.log(filter)
+     if(filter=="ALL"){
      for (i = 0; i < li.length; i++) {
-         a = li[i].getElementsByTagName("h3")[0];
-         console.log(a);
+         a = li[i].getElementsByTagName("div")[0];
          txtValue = a.textContent || a.innerText;
-         if (txtValue.toUpperCase().indexOf(filter) > -1) {
+        
+         if (txtValue.toUpperCase().indexOf(filter) > -1 )  {
              li[i].style.display = "";
          } else {
              li[i].style.display = "none";
          }
      }
- }
+ }else{   for (i = 0; i < li.length; i++) {
+         a = li[i].getElementsByTagName("div")[0];
+         a2=li[i].getElementsByTagName("h3")[0];
+         console.log(filter2);
+         txtValue = a.textContent || a.innerText;
+         txtValue2 = a2.textContent || a2.innerText;
+         if (txtValue.toUpperCase().indexOf(filter) > -1 && txtValue2.toUpperCase().indexOf(filter2) > -1)  {
+             li[i].style.display = "";
+         } else {
+             li[i].style.display = "none";
+         }
+     }}}
  //Multimedia filter
  function multiFunc() {
-     filter = "MULTIMEDIA";
-     multiActive.classList.add("active1");
-     commActive.classList.remove("active1")
-     projActive.classList.remove("active1");
-     desActive.classList.remove("active1");
-     envActive.classList.remove("active1");
-     medActive.classList.remove("active1");
-     eduActive.classList.remove("active1");
-     techActive.classList.remove("active1");
+    $(this).dblclick(); 
+    filter1Tag=document.getElementsByClassName("active1")[0].innerText;
+    filter=filter1Tag.toUpperCase();
+     filter2tag=document.getElementsByClassName("active2")[0].innerText;
+   
+        filter2=filter2tag.toUpperCase();
+   
+     
+     multiActive.classList.add("active2");
+     envActive.classList.remove("active2");
+     medActive.classList.remove("active2");
+     eduActive.classList.remove("active2");
+     techActive.classList.remove("active2");
      ul = document.getElementById("cards");
-     projActive2.classList.remove("active1");
+     projActive2.classList.remove("active2");
 
      li = ul.getElementsByTagName("li");
-     console.log(li);
-     console.log(filter)
+     if(filter=="ALL"){
      for (i = 0; i < li.length; i++) {
-         a = li[i].getElementsByTagName("h3")[0];
-         console.log(a);
+         a = li[i].getElementsByTagName("div")[0];
          txtValue = a.textContent || a.innerText;
-         if (txtValue.toUpperCase().indexOf(filter) > -1) {
+        
+         if (txtValue.toUpperCase().indexOf(filter) > -1 )  {
              li[i].style.display = "";
          } else {
              li[i].style.display = "none";
          }
      }
- }
+ }else{   for (i = 0; i < li.length; i++) {
+         a = li[i].getElementsByTagName("div")[0];
+         a2=li[i].getElementsByTagName("h3")[0];
+         console.log(filter2);
+         txtValue = a.textContent || a.innerText;
+         txtValue2 = a2.textContent || a2.innerText;
+         if (txtValue.toUpperCase().indexOf(filter) > -1 && txtValue2.toUpperCase().indexOf(filter2) > -1)  {
+             li[i].style.display = "";
+         } else {
+             li[i].style.display = "none";
+         }
+     }}}
  //Technology filter
  function techFunc() {
-     filter = "TECHNOLOGY";
-     techActive.classList.add("active1");
-     commActive.classList.remove("active1")
-     projActive.classList.remove("active1");
-     desActive.classList.remove("active1");
-     envActive.classList.remove("active1");
-     medActive.classList.remove("active1");
-     multiActive.classList.remove("active1");
-     eduActive.classList.remove("active1");
+    $(this).dblclick(); 
+    filter1Tag=document.getElementsByClassName("active1")[0].innerText;
+    filter=filter1Tag.toUpperCase();
+     filter2tag=document.getElementsByClassName("active2")[0].innerText;
+   
+        filter2=filter2tag.toUpperCase();
+   
+     
+     techActive.classList.add("active2");
+     envActive.classList.remove("active2");
+     medActive.classList.remove("active2");
+     multiActive.classList.remove("active2");
+     eduActive.classList.remove("active2");
      ul = document.getElementById("cards");
-     projActive2.classList.remove("active1");
+     projActive2.classList.remove("active2");
 
      li = ul.getElementsByTagName("li");
-     console.log(li);
-     console.log(filter)
+     if(filter=="ALL"){
      for (i = 0; i < li.length; i++) {
-         a = li[i].getElementsByTagName("h3")[0];
-         console.log(a);
+         a = li[i].getElementsByTagName("div")[0];
          txtValue = a.textContent || a.innerText;
-         if (txtValue.toUpperCase().indexOf(filter) > -1) {
+        console.log(filter);
+         if (txtValue.toUpperCase().indexOf(filter) > -1 )  {
              li[i].style.display = "";
          } else {
              li[i].style.display = "none";
          }
      }
- }
+ }else{   for (i = 0; i < li.length; i++) {
+         a = li[i].getElementsByTagName("div")[0];
+         a2=li[i].getElementsByTagName("h3")[0];
+         console.log(filter2);
+         txtValue = a.textContent || a.innerText;
+         txtValue2 = a2.textContent || a2.innerText;
+         if (txtValue.toUpperCase().indexOf(filter) > -1 && txtValue2.toUpperCase().indexOf(filter2) > -1)  {
+             li[i].style.display = "";
+         } else {
+             li[i].style.display = "none";
+         }
+     }}}
  </script>
     <script>
    
